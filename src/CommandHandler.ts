@@ -6,6 +6,7 @@ import { FileReader }           from './FileReader';
 
 export class CommandHandler {
     private static readonly COMMANDS_PATH = 'Commands';
+    private static readonly MAX_REPEATS = 100;
     private static instance: CommandHandler;
     private commandMap: ICommandMap[] = [];
     private commandIDCount: number = 0;
@@ -50,7 +51,7 @@ export class CommandHandler {
 
                     if (repeatsBuffer) {
                         if (commandIDList.length) {
-                            commandIDList[commandIDList.length - 1].repeat = parseInt(repeatsBuffer);
+                            commandIDList[commandIDList.length - 1].repeat = Math.min(parseInt(repeatsBuffer), CommandHandler.MAX_REPEATS);
                         }
 
                         repeatsBuffer = '';
