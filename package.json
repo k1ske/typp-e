@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "description": "Simple TS bot grid navigation",
     "main": "build/TyppE.js",
-    "repository": "https://github.com/k1ske/type-e",
+    "repository": "https://github.com/k1ske/typp-e",
     "author": "k1ske",
     "license": "Apache-2.0",
     "private": false,
