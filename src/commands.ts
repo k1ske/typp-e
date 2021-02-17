@@ -20,9 +20,9 @@ function loadCommandsFromFile(file: string): Promise<CommandMap[]> {
 
                 if (done && commands.length) {
                     commands[commands.length - 1].repetitions = Math.min(MAX_REPETITIONS, parseInt(repetitionsBuffer));
-                } else {
-                    return;
                 }
+
+                return;
             }
 
             if (repetitionsBuffer) {
