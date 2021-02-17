@@ -18,11 +18,11 @@ function loadCommandsFromFile(file: string): Promise<CommandMap[]> {
             if (char.match(/\d/)) {
                 repetitionsBuffer += char;
 
-                if (!done && commands.length) {
+                if (done && commands.length) {
                     commands[commands.length - 1].repetitions = Math.min(MAX_REPETITIONS, parseInt(repetitionsBuffer));
+                } else {
+                    return;
                 }
-
-                return;
             }
 
             if (repetitionsBuffer) {
@@ -42,7 +42,9 @@ function loadCommandsFromFile(file: string): Promise<CommandMap[]> {
                 });
             }
 
-            resolve(commands);
+            if (done) {
+                resolve(commands);
+            }
         });
     });
 }
