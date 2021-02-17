@@ -15,9 +15,12 @@
 
     - `make run` or `make test`;
         - If run:
-            - The terminal will prompt a request to inputs file path;
+            - The terminal will prompt the inputs file path;
             - Once the file is informed wait for the magic happens;
         - If test: just wait for the results;
+    
+- Misc:
+    - `make rebuild` to rebuild docker image;
 
 #### Hosted way:
 

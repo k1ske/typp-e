@@ -8,4 +8,4 @@ RUN yarn --frozen-lockfile
 
 RUN yarn build
 
-CMD yarn start --input='in/input.txt'
+CMD yarn start --input='inputs/input.txt'

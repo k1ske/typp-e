@@ -1,8 +1,8 @@
-import { exec }      from 'child_process';
+import { exec } from 'child_process';
 import { promisify } from 'util';
 
 const tsExec = 'node_modules/.bin/ts-node';
-const epFile = 'src/TyppE.ts';
+const epFile = 'src/app.ts';
 const inputArg = 'input';
 const baseCmd = `${tsExec} ${epFile} --json --${inputArg}=test/input-test-cases/`;
 
