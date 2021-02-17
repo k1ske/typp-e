@@ -51,4 +51,4 @@ function printState(state: PositionState, json: boolean = false) {
 export {
     run,
     GRID_SIZE
-}
+};

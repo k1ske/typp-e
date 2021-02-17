@@ -43,7 +43,7 @@ function turnRight(repetitions: number, state: PositionState) {
         sanitizedDirection -= 4;
     }
 
-    state.direction = sanitizedDirection;
+    state.direction = <DIRECTIONS>sanitizedDirection;
 }
 
 function turnLeft(repetitions: number, state: PositionState) {
@@ -60,4 +60,4 @@ export {
     move,
     turnRight,
     turnLeft
-}
+};
